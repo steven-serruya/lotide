@@ -1,6 +1,15 @@
 const letterPositions = function(sentence) {
   const results = {};
-  // logic to update results here
+  for (let i = 0; i < sentence.length; i++) {
+    let letter = sentence[i];
+    if (letter !== " ") {
+      if (results[letter]) {
+        results[letter].push(i);
+      } else {
+        results[letter] = [i];
+      }
+    }
+  }
   return results;
 };
 
@@ -30,3 +39,4 @@ assertArraysEqual(positions['h'], [0]);
 assertArraysEqual(positions['e'], [1]);
 assertArraysEqual(positions['l'], [2, 3]);
 assertArraysEqual(positions['o'], [4]);
+console.log(positions);
