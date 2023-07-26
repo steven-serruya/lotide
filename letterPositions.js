@@ -1,3 +1,9 @@
+const letterPositions = function(sentence) {
+  const results = {};
+  // logic to update results here
+  return results;
+};
+
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
@@ -18,20 +24,9 @@ const assertArraysEqual = function(actual, expected) {
   console.log(message);
 };
 
-const middle = function(arr) {
-  let halfOfIndex = arr.length / 2;
-  let returnedArray = [];
-
-  if (arr.length % 2 === 0) {
-    // Even-length array, push the middle two elements
-    returnedArray.push(arr[halfOfIndex - 1], arr[halfOfIndex]);
-  } else {
-    // Odd-length array, push the single middle element
-    let middleIndex = Math.floor(halfOfIndex);
-    returnedArray.push(arr[middleIndex]);
-  }
-
-  return returnedArray;
-};
-
-
+const testString = "hello";
+const positions = letterPositions(testString);
+assertArraysEqual(positions['h'], [0]);
+assertArraysEqual(positions['e'], [1]);
+assertArraysEqual(positions['l'], [2, 3]);
+assertArraysEqual(positions['o'], [4]);
