@@ -12,7 +12,7 @@ const eqObjects = function(object1, object2) {
   const keys2 = Object.keys(object2);
 
   if (keys1.length !== keys2.length) {
-    console.log(`🛑🛑🛑 Assertion Failed: Objects have different number of keys`);
+    
     return false;
   }
 
@@ -22,19 +22,19 @@ const eqObjects = function(object1, object2) {
 
     if (Array.isArray(value1) && Array.isArray(value2)) {
       if (!eqArrays(value1, value2)) {
-        console.log(`🛑🛑🛑 Assertion Failed: Objects aren't equal`);
+        
         return false;
       
       }
     } else {
       if (value1 !== value2) {
-        console.log(`🛑🛑🛑 Assertion Failed: Objects aren't equal`);
+        
         return false;
       }
     }
 
   }
-  console.log(`✅✅✅ Assertion Passed: Objects are equal.`);
+  
   return true;
 
 };
