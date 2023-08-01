@@ -12,7 +12,7 @@ describe("#tail", () => {
     // Call the tail function with the array as an argument
     const result = tail(['Hello', 'Lighthouse', 'Labs']);
 
-    // Compare the result with the expected array
-    expect(result).to.deep.equal(['Lighthouse', 'Labs']);
+    assert.deepEqual(result, ['Lighthouse', 'Labs']);
+
   });
 });
